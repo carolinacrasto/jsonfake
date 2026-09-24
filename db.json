@@ -1,7 +1,173 @@
-
+{
   "usuarios": [
-    { "nome": "Joao", "senha": "1234J@", "email": "mengaomalvadao@.com" },
-    { "nome": "Carol", "senha": "1234J@", "email": "exemplo1@.com" },
-    { "nome": "Maria", "senha": "1234J@", "email": "exemplo2@.com"}
-    
+    {
+      "id": 1,
+      "nome": "Joao",
+      "senha": "1234J@",
+      "email": "mengaomalvadao@.com"
+    },
+    {
+      "id": 2,
+      "nome": "Carol",
+      "senha": "1234J@",
+      "email": "exemplo1@.com"
+    },
+    {
+      "id": 3,
+      "nome": "Maria",
+      "senha": "1234J@",
+      "email": "exemplo2@.com"
+    }
+  ],
+
+  "categorias": [
+    {
+      "id": 1,
+      "nome": "Carro",
+      "valorHora": 10,
+      "valorDiaria": 50,
+      "valorPernoite": 70,
+      "vagasTotais": 50,
+      "vagasOcupadas": 10
+    },
+    {
+      "id": 2,
+      "nome": "Moto",
+      "valorHora": 6,
+      "valorDiaria": 30,
+      "valorPernoite": 45,
+      "vagasTotais": 20,
+      "vagasOcupadas": 5
+    },
+    {
+      "id": 3,
+      "nome": "Caminhão",
+      "valorHora": 30,
+      "valorDiaria": 60,
+      "valorPernoite": 90,
+      "vagasTotais": 15,
+      "vagasOcupadas": 2
+    },
+    {
+      "id": 4,
+      "nome": "Van",
+      "valorHora": 25,
+      "valorDiaria": 35,
+      "valorPernoite": 80,
+      "vagasTotais": 2,
+      "vagasOcupadas": 2
+    }
+  ],
+
+  "tickets": [
+    {
+      "id": 1,
+      "placa": "ABC1234",
+      "dataHoraEntrada": "05/02/2000 12:00",
+      "dataHoraSaida": "05/02/2000 14:00",
+      "valor": 20,
+      "status": "aberto",
+      "idcategoria": 2
+    },
+    {
+      "id": 2,
+      "placa": "DEF5678",
+      "dataHoraEntrada": "05/02/2000 13:00",
+      "dataHoraSaida": "05/02/2000 15:00",
+      "valor": 20,
+      "status": "aberto",
+      "idcategoria": 1
+    },
+    {
+      "id": 3,
+      "placa": "GHI9012",
+      "dataHoraEntrada": "05/02/2000 14:00",
+      "dataHoraSaida": "05/02/2000 16:00",
+      "valor": 60,
+      "status": "aberto",
+      "idcategoria": 3
+    },
+    {
+      "id": 4,
+      "placa": "JKL3456",
+      "dataHoraEntrada": "05/02/2000 15:00",
+      "dataHoraSaida": "05/02/2000 17:00",
+      "valor": 50,
+      "status": "aberto",
+      "idcategoria": 4
+    }
+  ],
+
+  "pagamentos": [
+    {
+      "id": 1,
+      "valorCalculado": 20,
+      "valorPago": 20,
+      "troco": 0,
+      "formaPagamento": "PIX",
+      "dataHora": "05/02/2000 14:00"
+    },
+    {
+      "id": 2,
+      "valorCalculado": 10,
+      "valorPago": 20,
+      "troco": 10,
+      "formaPagamento": "Dinheiro",
+      "dataHora": "05/02/2000 15:00"
+    },
+    {
+      "id": 3,
+      "valorCalculado": 30,
+      "valorPago": 30,
+      "troco": 0,
+      "formaPagamento": "Cartão",
+      "dataHora": "05/02/2000 16:00"
+    },
+    {
+      "id": 4,
+      "valorCalculado": 25,
+      "valorPago": 30,
+      "troco": 5,
+      "formaPagamento": "Dinheiro",
+      "dataHora": "05/02/2000 17:00"
+    }
+  ],
+
+  "caixaturno": [
+    {
+      "id": 1,
+      "dataHoraAbertura": "05/02/2000 08:00",
+      "dataHoraFechamento": null,
+      "idTurno": 1,
+      "status": "aberto",
+      "valorInicial": 100,
+      "valorFinal": null
+    }
+  ],
+
+  "movimentacaocaixa": [
+    {
+      "id": 1,
+      "idCaixa": 1,
+      "tipo": "entrada",
+      "valor": 20,
+      "dataHora": "05/02/2000 14:00",
+      "motivo": "Pagamento estacionamento"
+    },
+    {
+      "id": 2,
+      "idCaixa": 1,
+      "tipo": "entrada",
+      "valor": 10,
+      "dataHora": "05/02/2000 15:00",
+      "motivo": "Pagamento estacionamento"
+    },
+    {
+      "id": 3,
+      "idCaixa": 1,
+      "tipo": "entrada",
+      "valor": 30,
+      "dataHora": "05/02/2000 16:00",
+      "motivo": "Pagamento estacionamento"
+    }
   ]
