@@ -1,22 +1,30 @@
+//json 
+
 {
   "usuarios": [
     {
       "id": 1,
-      "nome": "Joao",
+      "nome": "Carol",
+      "email": "carol@email.com",
       "senha": "1234J@",
-      "email": "mengaomalvadao@.com"
+      "perfil": "ADMIN",
+      "ativo": true
     },
     {
       "id": 2,
-      "nome": "Carol",
+      "nome": "Joao",
+      "email": "joao@email.com",
       "senha": "1234J@",
-      "email": "exemplo1@.com"
+      "perfil": "OPERADOR",
+      "ativo": true
     },
     {
       "id": 3,
       "nome": "Maria",
+      "email": "maria@email.com",
       "senha": "1234J@",
-      "email": "exemplo2@.com"
+      "perfil": "OPERADOR",
+      "ativo": true
     }
   ],
 
@@ -28,7 +36,9 @@
       "valorDiaria": 50,
       "valorPernoite": 70,
       "vagasTotais": 50,
-      "vagasOcupadas": 10
+      "vagasOcupadas": 10,
+      "vagasDisponiveis": 40,
+      "ativo": true
     },
     {
       "id": 2,
@@ -37,7 +47,223 @@
       "valorDiaria": 30,
       "valorPernoite": 45,
       "vagasTotais": 20,
-      "vagasOcupadas": 5
+      "vagasOcupadas": 5,
+      "vagasDisponiveis": 15,
+      "ativo": true
+    },
+    {
+      "id": 3,
+      "nome": "Caminhao",
+      "valorHora": 30,
+      "valorDiaria": 100,
+      "valorPernoite": 150,
+      "vagasTotais": 10,
+      "vagasOcupadas": 2,
+      "vagasDisponiveis": 8,
+      "ativo": true
+    }
+  ],
+
+  "veiculos": [
+    {
+      "id": 1,
+      "placa": "ABC1D23",
+      "categoriaId": 1
+    },
+    {
+      "id": 2,
+      "placa": "DEF4G56",
+      "categoriaId": 2
+    },
+    {
+      "id": 3,
+      "placa": "GHI7J89",
+      "categoriaId": 3
+    },
+    {
+      "id": 4,
+      "placa": "JKL1M23",
+      "categoriaId": 1
+    }
+  ],
+
+  "tickets": [
+    {
+      "id": 1,
+      "veiculoId": 1,
+      "categoriaId": 1,
+      "placa": "ABC1D23",
+      "dataEntrada": "2026-09-24",
+      "horaEntrada": "08:00",
+      "dataSaida": null,
+      "horaSaida": null,
+      "tempoPermanenciaMinutos": null,
+      "tipoCobranca": null,
+      "valorTotal": null,
+      "status": "ABERTO",
+      "operadorEntradaId": 2,
+      "operadorSaidaId": null
+    },
+    {
+      "id": 2,
+      "veiculoId": 2,
+      "categoriaId": 2,
+      "placa": "DEF4G56",
+      "dataEntrada": "2026-09-24",
+      "horaEntrada": "09:30",
+      "dataSaida": null,
+      "horaSaida": null,
+      "tempoPermanenciaMinutos": null,
+      "tipoCobranca": null,
+      "valorTotal": null,
+      "status": "ABERTO",
+      "operadorEntradaId": 2,
+      "operadorSaidaId": null
+    },
+    {
+      "id": 3,
+      "veiculoId": 4,
+      "categoriaId": 1,
+      "placa": "JKL1M23",
+      "dataEntrada": "2026-09-23",
+      "horaEntrada": "10:00",
+      "dataSaida": "2026-09-23",
+      "horaSaida": "12:10",
+      "tempoPermanenciaMinutos": 130,
+      "tipoCobranca": "HORA",
+      "valorTotal": 20,
+      "status": "FINALIZADO",
+      "operadorEntradaId": 2,
+      "operadorSaidaId": 3
+    }
+  ],
+
+  "pagamentos": [
+    {
+      "id": 1,
+      "ticketId": 3,
+      "caixaId": 1,
+      "formaPagamento": "PIX",
+      "valor": 20,
+      "valorRecebido": 20,
+      "troco": 0,
+      "data": "2026-09-23",
+      "hora": "12:10",
+      "status": "PAGO",
+      "operadorId": 3
+    },
+    {
+      "id": 2,
+      "ticketId": 4,
+      "caixaId": 1,
+      "formaPagamento": "DINHEIRO",
+      "valor": 30,
+      "valorRecebido": 50,
+      "troco": 20,
+      "data": "2026-09-23",
+      "hora": "15:20",
+      "status": "PAGO",
+      "operadorId": 2
+    },
+    {
+      "id": 3,
+      "ticketId": 5,
+      "caixaId": 1,
+      "formaPagamento": "CARTAO",
+      "valor": 50,
+      "valorRecebido": 50,
+      "troco": 0,
+      "data": "2026-09-23",
+      "hora": "18:00",
+      "status": "PAGO",
+      "operadorId": 2
+    }
+  ],
+
+  "caixas": [
+    {
+      "id": 1,
+      "usuarioId": 2,
+      "dataAbertura": "2026-09-24",
+      "horaAbertura": "07:30",
+      "valorInicial": 100,
+      "dataFechamento": null,
+      "horaFechamento": null,
+      "totalDinheiro": 0,
+      "totalPix": 0,
+      "totalCartao": 0,
+      "valorFinal": null,
+      "status": "ABERTO"
+    },
+    {
+      "id": 2,
+      "usuarioId": 3,
+      "dataAbertura": "2026-09-23",
+      "horaAbertura": "07:30",
+      "valorInicial": 100,
+      "dataFechamento": "2026-09-23",
+      "horaFechamento": "22:00",
+      "totalDinheiro": 200,
+      "totalPix": 350,
+      "totalCartao": 450,
+      "valorFinal": 1100,
+      "status": "FECHADO"
+    }
+  ],
+
+  "movimentacoesCaixa": [
+    {
+      "id": 1,
+      "caixaId": 1,
+      "tipo": "ABERTURA",
+      "formaPagamento": "DINHEIRO",
+      "valor": 100,
+      "descricao": "Valor inicial do caixa",
+      "data": "2026-09-24",
+      "hora": "07:30",
+      "usuarioId": 2
+    },
+    {
+      "id": 2,
+      "caixaId": 2,
+      "tipo": "ENTRADA",
+      "formaPagamento": "PIX",
+      "valor": 20,
+      "descricao": "Pagamento de estacionamento",
+      "data": "2026-09-23",
+      "hora": "12:10",
+      "usuarioId": 3
+    }
+  ],
+
+  "recibos": [
+    {
+      "id": 1,
+      "ticketId": 3,
+      "pagamentoId": 1,
+      "placa": "JKL1M23",
+      "categoria": "Carro",
+      "dataEntrada": "2026-09-23",
+      "horaEntrada": "10:00",
+      "dataSaida": "2026-09-23",
+      "horaSaida": "12:10",
+      "valorTotal": 20,
+      "formaPagamento": "PIX",
+      "emitido": true
+    }
+  ],
+
+  "configuracoes": [
+    {
+      "id": 1,
+      "toleranciaFracaoHoraMinutos": 15,
+      "regraFracaoHora": "Ate 15 minutos adicionais mantém a quantidade de horas. A partir de 16 minutos cobra a próxima hora.",
+      "permitirMensalista": false,
+      "formasPagamento": [
+        "PIX",
+        "DINHEIRO",
+        "CARTAO"
+      ]
     }
   ]
 }
