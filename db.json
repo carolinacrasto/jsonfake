@@ -22,7 +22,7 @@
       "email": "maria@email.com",
       "senha": "1234J@",
       "perfil": "OPERADOR",
-      "ativo": true
+      "ativo": false
     }
   ],
 
@@ -56,6 +56,16 @@
       "vagasTotais": 10,
       "vagasOcupadas": 2,
       "ativo": true
+    }
+    {
+      "id": 3,
+      "nome": "Van Escolar",
+      "valorHora": 30,
+      "valorDiaria": 80,
+      "valorPernoite": 150,
+      "vagasTotais": 10,
+      "vagasOcupadas": 2,
+      "ativo": false
     }
   ],
 
@@ -118,7 +128,7 @@
     }
   ],
 
-  "caixas": [
+  "caixa": [
     {
       "id": 1,
       "usuarioId": 2,
